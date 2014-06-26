@@ -110,7 +110,7 @@ http.createServer(function(req, res) {
 							})
 					}
 					fs.readFile(pathname, function(err, data) {
-						res.end(new Buffer(data));
+						res.end(data);
 					})
 				} else if (stat.isDirectory()) {
 					// 构建索引
