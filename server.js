@@ -1,4 +1,3 @@
-var conf = JSON.stringify(fs.readFileSync('./server.conf'))
 var http = require('http'),
 	url = require('url'),
 	path = require('path'),
@@ -6,9 +5,9 @@ var http = require('http'),
 	dns = require('dns'),
 	fs = require('fs'),
 	zlib = require('zlib'), // node has its own zlib package
-	port = conf.port,
 	cache = {} // cache[absPath] = data;
-
+var conf = JSON.parse(fs.readFileSync('./server.conf').toString())
+var port = conf.port //listen EACCES 权限
 var ignoreExtname = conf.ignoreExtname
 var DIR = path.join(__dirname,conf.root)
 var styleText = conf.style
