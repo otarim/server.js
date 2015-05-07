@@ -51,7 +51,7 @@ http.createServer(function(req, res) {
 				len += d.length
 			}).on('end',function(){
 				chunk = Buffer.concat(chunk,len).toString()
-				req.headers['Content-length'] = chunk.length
+				req.headers['Content-length'] = Buffer.byteLength(chunk)
 				req.reqConfig = reqConfig
 				req.postData = chunk
 				return request(req,res)
