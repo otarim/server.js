@@ -9,35 +9,40 @@ server.js
 
 ```
 .
-├── colors.js     --- style file
-├── README.md     --- markDown file
-├── server.js     --- js file
-├── server.conf   --- conf file
+├── colors.js     --- colorful console output
+├── README.md     --- readme file
+├── server.js     --- entry file
+├── server.conf   --- config file
 └── license       --- license file
 ```
-###Source code
-
-You can clone the source code from github, or using bower.
 
 ###Settings
 
 The following object sets up the default settings of ```server.conf``` :
 
-
-
 ```
-"root": "my.me", // http server path
-"port": 8080, // http server port
+"root": "./", // http server path
+"port": 2333, // http server port
+"gzip": ["application/javascript"] // which mimeType to use gzip compress
+"ignoreExtname": [".DS_Store",".git",".idea"] // extname to ignore
+"domainMap": {
+    "netease.misaka.ota": {
+        "port": 9527
+    },
+    "cors.misaka.ota": {
+        "port": 8060
+    }
+} // Port Mapping,you should map these domains to localhost in your hosts
+"style": ... // your customize style
 ```
 
 ###Mocha
 
 ```
-$ git clone https://github.com/hoosin/server.js.git
-$ node server.js
+$ npm test
 ```
 
 ### License
 
 Copyright (c) 2015 contributors.
-Released under the ,  [licenses](https://raw.githubusercontent.com/hoosin/server.js/master/LICENSE)
+Released under the ,  [licenses](https://raw.githubusercontent.com/otarim/server.js/master/LICENSE)

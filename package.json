@@ -1,0 +1,31 @@
+{
+  "name": "server.js",
+  "version": "1.0.0",
+  "description": "server.js =========",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/otarim/server.js.git"
+  },
+  "keywords": [
+    "nodejs",
+    "server"
+  ],
+  "author": "otarim.com@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/otarim/server.js/issues"
+  },
+  "homepage": "https://github.com/otarim/server.js",
+  "dependencies": {
+    "mime": "^1.3.4",
+    "mocha": "^2.2.5"
+  }
+}
